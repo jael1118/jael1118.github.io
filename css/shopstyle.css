@@ -1,16 +1,21 @@
-﻿body {
+body {
     font-family: "Inter", sans-serif;
     margin: 0;
     background-color: #fff;
     color: #333;
     padding-top: 70px;
+    cursor: url("../images/starr.png"), auto;
+}
+
+a, button, .icons span, .product-card {
+    cursor: url("../images/starr.png"), pointer;
 }
 
 /* ---- Header ---- */
 header {
     width: 100%;
     border-bottom: 1px solid #ccc;
-    padding: 10px 0;
+    padding: 30px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,71 +27,81 @@ header {
     width: 100%;
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.6);
+    justify-content: space-between;
 }
 
-nav {
-    position: absolute;
-    left: 20px;
+.header-left nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
 }
 
-    nav a {
-        margin: 0 10px;
+    .header-left nav a {
+        padding: 0 12px;
         text-decoration: none;
         color: #000;
-        font-size: 10px;
-        margin-right: 6px;
+        font-size: 12px;
         letter-spacing: 0.5px;
     }
 
-        nav a:hover {
+        .header-left nav a:hover {
             text-decoration: underline;
         }
 
-.icons {
-    position: absolute;
-    right: 20px;
+.header-right {
+    display: flex;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    align-items: center;
 }
 
-    .icons span {
-        margin-left: 10px;
-        cursor: pointer;
-    }
+.icons span {
+    margin-left: 10px;
+    /*cursor: pointer;*/
+}
 
-.logo {
-    width: 120px;
+.header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /*width: 120px;*/
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    /*  flex: 1;*/
 }
 
-    .logo img {
-        height: 45px;
-        width: auto;
-    }
+.logo img {
+    height: 50px;
+    width: auto;
+}
 
 /* ---- Filter Buttons ---- */
 .filters {
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     gap: 10px;
-    padding:0 130px;
-    margin: 30px 0;
+    max-width: 1000px; /* ✅ 與 products 一致 */
+    margin: 30px auto; /* ✅ 置中 */
+    padding: 0 20px;
 }
 
     .filters button {
         background: none;
-        border: 1px solid #ccc;
+        border: 1.25px solid #111;
         padding: 5px 15px;
-        cursor: pointer;
+        /*cursor: pointer;*/
         font-size: 13px;
         transition: all 0.2s ease;
     }
 
         .filters button.active,
         .filters button:hover {
-            background-color: #333;
-            color: #fff;
+            background-color: #DFDCE9;
+            color: #111;
         }
 
 /* Products */
@@ -122,7 +137,7 @@ nav {
     width: 100%;
     aspect-ratio: 1 / 1; /* 正方形 */
     background-color: #f0f0f0; /* ✅ 灰色底回來 */
-    border: 1px solid #ddd; /* ✅ 灰色框回來 */
+    border: 1px solid #111; /* ✅ 灰色框回來 */
     border-radius: 4px;
     overflow: hidden; /* ✅ 讓圖片不超出邊框 */
     margin-bottom: 10px;
@@ -156,7 +171,7 @@ nav {
 
     .pagination span {
         margin: 0 8px;
-        cursor: pointer;
+        /*cursor: pointer;*/
         font-size: 13px;
     }
 
