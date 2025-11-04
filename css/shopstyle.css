@@ -86,7 +86,7 @@ header {
     gap: 10px;
     max-width: 1000px; /* ✅ 與 products 一致 */
     margin: 30px auto; /* ✅ 置中 */
-    padding: 0 20px;
+    padding: 30px 20px;
 }
 
     .filters button {
@@ -110,7 +110,7 @@ header {
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     max-width: 1000px;
-    margin: 50px auto;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
@@ -207,3 +207,4 @@ footer {
         gap: 20px;
     }
 }
+
