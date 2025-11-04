@@ -1,18 +1,23 @@
-﻿/* General */
+/* General */
 body {
     font-family: 'Inter', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff;
     color: #111;
-    padding-top: 70px; /* 根據你的 header 高度微調 */
+    padding-top: 100px; /* 根據你的 header 高度微調 */
+    cursor: url("../images/starr.png"), auto;
+}
+
+a, button, .icons span, .product-card {
+    cursor: url("../images/starr.png"), pointer;
 }
 
 /* Header */
 header {
     width: 100%;
     border-bottom: 1px solid #ccc;
-    padding: 10px 0;
+    padding: 30px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,54 +28,64 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.6); 
+    background-color: rgba(255, 255, 255, 0.6);
+    justify-content: space-between;
 }
 
-nav {
-    position: absolute;
-    left: 20px;
+.header-left nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
 }
 
-    nav a {
-        margin: 0 10px;
-        text-decoration: none;
-        color: #000;
-        font-size: 10px;
-        margin-right: 6px;
-        letter-spacing: 0.5px;
+.header-left nav a {
+    padding: 0 12px;
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    
+}
+
+    .header-left nav a:hover {
+        text-decoration: underline;
     }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-.icons {
-    position: absolute;
-    right: 20px;
+.header-right {
+    display: flex;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    align-items: center;
 }
 
-    .icons span {
-        margin-left: 10px;
-        cursor: pointer;
-    }
+.icons span {
+    margin-left: 10px;
+    /*cursor: pointer;*/
+}
 
-.logo {
-    width: 120px;
+.header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /*width: 120px;*/
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+  /*  flex: 1;*/
 }
 
-    .logo img {
-        height: 45px;
-        width: auto;
-    }
+.logo img {
+    height: 50px;
+    width: auto;
+}
 
 /* Banner */
 .banner {
     width: 100%;
-    height: 380px;
+    height: 505px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,8 +94,8 @@ nav {
 
 .banner-imgs {
     max-width: 1000px;
-    width: 90%;
-    height: 320px;
+    width: 100%;
+    height: 595px;
     margin: 0 auto; /* ✅ 置中 */
     padding: 0 0;
     position: relative;
@@ -120,7 +135,7 @@ nav {
         background-color: rgba(255, 255, 255, 0.6); /* 半透明白點 */
         border-radius: 50%;
         margin: 0 4px;
-        cursor: pointer;
+        /*cursor: pointer;*/
         transition: 0.3s;
     }
 
@@ -161,7 +176,7 @@ nav {
     width: 100%;
     aspect-ratio: 1 / 1; /* 正方形 */
     background-color: #f0f0f0; /* ✅ 灰色底回來 */
-    border: 1px solid #ddd; /* ✅ 灰色框回來 */
+    border: 1px solid #111; /* ✅ 灰色框回來 */
     border-radius: 4px;
     overflow: hidden; /* ✅ 讓圖片不超出邊框 */
     margin-bottom: 10px;
