@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CELESTAR SHOP</title>
-    <link rel="stylesheet" href="css\shopstyle.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/shopstyle.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="header-left">
             <nav>
@@ -36,7 +36,6 @@
         </div>
     </header>
 
-    <!-- Filters -->
     <div class="filters">
         <button class="active" data-category="all">ALL</button>
         <button data-category="sticker">STICKER</button>
@@ -44,12 +43,10 @@
         <button data-category="accessory">ACCESSORY</button>
     </div>
 
-    <!-- Products -->
     <section class="products">
         <div class="product-card"></div>
     </section>
 
-    <!-- Pagination -->
     <div class="pagination" id="pagination">
         <span id="prev">&lt;</span>
         <span class="active" id="page1">1</span>
@@ -57,7 +54,6 @@
         <span id="next">&gt;</span>
     </div>
 
-    <!-- Footer -->
     <footer>
         COPYRIGHT © 2025 CELESTAR <br>
         For academic purposes only; non-profit testing site.<br>
@@ -68,18 +64,14 @@
     <script>
         // ---- 商品資料 ----
         const products = [
-            { id: 1, name: "BLUE OCEAN NAVY STICKER", price: "$20", category: "sticker", img: "images/stk1.jpg" },
-            { id:2, name: "SUNDAE BLUSH STICKER", price: "$20", category: "sticker", img: "images/stk2.jpg" },
+            { id: 1, name: "BLUE OCEAN HOUR STICKER", price: "$20", category: "sticker", img: "images/stk1.jpg" },
+            { id: 2, name: "SUNDAY BLUSH STICKER", price: "$20", category: "sticker", img: "images/stk2.jpg" },
             { id: 3, name: "LUCKY GREEN STICKER", price: "$20", category: "sticker", img: "images/stk3.jpg" },
-            { id: 4, name: "LEMON BLOSSOM STICKER", price: "$20", category: "sticker", img: "images/stk4.jpg" },
-            { id: 5, name: "KEYRING ALPHA", price: "$10", category: "sticker", img: "images/stk5.jpg" },
-            { id: 6, name: "KEYRING BETA", price: "$10", category: "sticker", img: "images/stk6.jpg" },
-            { id: 7, name: "SILVER ACCESSORY", price: "$25", category: "accessory", img: "images/acc1.png" },
-            { id: 8, name: "GOLD ACCESSORY", price: "$30", category: "accessory", img: "images/acc2.png" }
-            //{ id:9, name: "MOONLIGHT STICKER", price: "$20", category: "sticker", img: "https://via.placeholder.com/200" },
-            //{ id:10, name: "CLOUD KEYRING", price: "$15", category: "keyring", img: "https://via.placeholder.com/200" },
-            //{ id:11, name: "RAINBOW ACCESSORY", price: "$22", category: "accessory", img: "https://via.placeholder.com/200" },
-            //{ id:12, name: "STAR STICKER", price: "$18", category: "sticker", img: "https://via.placeholder.com/200" },
+            { id: 4, name: "LEMON MOOD STICKER", price: "$20", category: "sticker", img: "images/stk4.jpg" },
+            { id: 5, name: "STRAWBERRY VIBES STICKER", price: "$10", category: "sticker", img: "images/stk5.jpg" },
+            { id: 6, name: "MONOTONE DIARY STICKER", price: "$10", category: "sticker", img: "images/stk6.jpg" },
+            { id: 7, name: "APPLE FLAVOR HAIRPIN", price: "$120", category: "accessory", img: "images/acc1.png" },
+            { id: 8, name: "STARFISH RING", price: "$200", category: "accessory", img: "images/acc2.png" }
         ];
 
         const perPage = 8;
