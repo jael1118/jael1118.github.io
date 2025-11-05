@@ -4,7 +4,7 @@ body {
     background-color: #fff;
     color: #333;
     padding-top: 70px;
-    cursor: url("../images/starr.png"), auto;
+    cursor: url("../images/starr.png"), auto; 
 }
 
 a, button, .icons span, .product-card {
@@ -201,3 +201,4 @@ footer {
         gap: 20px;
     }
 }
+
