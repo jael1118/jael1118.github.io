@@ -42,6 +42,7 @@ header {
         color: #000;
         font-size: 12px;
         letter-spacing: 0.5px;
+        font-weight: bold;
     }
 
         .header-left nav a:hover {
@@ -65,12 +66,10 @@ header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    /*width: 120px;*/
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /*  flex: 1;*/
 }
 
 .logo img {
@@ -123,7 +122,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    font-family: "Noto Sans TC", sans-serif;
+    font-family: "Inter", sans-serif;
     color: #333;
 }
 
@@ -135,18 +134,67 @@ main {
 
     .product-info .price {
         font-size: 14px;
-        margin-bottom: 10px;
     }
 
-.select-section select {
-    font-weight: 700;
-    width: 120px;
-    padding: 4px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    cursor: pointer;
-    transition: 0.2s;
+.select-label {
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
 }
+
+.custom-select {
+    position: relative;
+    width: 140px;
+    user-select: none;
+    font-size: 14px;
+}
+
+.select-selected {
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 10px;
+    /*cursor: pointer;*/
+    font-weight: bold;
+}
+
+    .select-selected:after {
+        content: "▼";
+        position: absolute;
+        right: 12px;
+        top: 14px;
+        font-size: 10px;
+        color: #555;
+    }
+
+    .select-selected.active:after {
+        content: "▲";
+    }
+
+.select-items {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 4px;
+    display: none;
+    z-index: 99;
+}
+
+    .select-items div {
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+        .select-items div:hover {
+            background-color: #AEAEDE;
+        }
+
+    .select-items.show {
+        display: block;
+    }
 
 hr {
     border: none;
@@ -157,22 +205,27 @@ hr {
 .quantity {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     margin-top: 5px;
 }
 
-    .quantity button {
-        width: 25px;
-        height: 25px;
-        border: 1px solid #aaa;
-        background-color: #fff;
-        font-size: 16px;
-        /*cursor: pointer;*/
-        transition: 0.2s;
-    }
+.quantity-section label {
+    font-size: 13px; 
+    margin-right: 15px; 
+    margin-top: 8px;
+}
+
+.quantity button {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #aaa;
+    font-size: 14px;
+    /*cursor: pointer;*/
+    transition: 0.2s;
+}
 
         .quantity button:hover {
-            background-color: #f0f0f0;
+            background-color: #AEAEDE;
         }
 
     .quantity span {
@@ -237,4 +290,5 @@ footer {
     padding: 20px 20px;
     margin-top: 50px;
 }
+
 
