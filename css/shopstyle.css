@@ -11,7 +11,6 @@ a, button, .icons span, .product-card {
     cursor: url("../images/starr.png"), pointer;
 }
 
-/* ---- Header ---- */
 header {
     width: 100%;
     border-bottom: 1px solid #ccc;
@@ -43,6 +42,7 @@ header {
         color: #000;
         font-size: 12px;
         letter-spacing: 0.5px;
+        font-weight: bold;
     }
 
         .header-left nav a:hover {
@@ -66,12 +66,10 @@ header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    /*width: 120px;*/
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /*  flex: 1;*/
 }
 
 .logo img {
@@ -79,13 +77,12 @@ header {
     width: auto;
 }
 
-/* ---- Filter Buttons ---- */
 .filters {
     display: flex;
     justify-content: flex-start;
     gap: 10px;
-    max-width: 1000px; /* ✅ 與 products 一致 */
-    margin: 30px auto; /* ✅ 置中 */
+    max-width: 1000px; 
+    margin: 30px auto; 
     padding: 30px 20px;
 }
 
@@ -104,7 +101,6 @@ header {
             color: #111;
         }
 
-/* Products */
 .products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -135,11 +131,11 @@ header {
 
 .product-img {
     width: 100%;
-    aspect-ratio: 1 / 1; /* 正方形 */
-    background-color: #f0f0f0; /* ✅ 灰色底回來 */
-    border: 1px solid #111; /* ✅ 灰色框回來 */
+    aspect-ratio: 1 / 1;
+    background-color: #f0f0f0; 
+    border: 1px solid #111; 
     border-radius: 4px;
-    overflow: hidden; /* ✅ 讓圖片不超出邊框 */
+    overflow: hidden; 
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -149,7 +145,7 @@ header {
     .product-img img {
         width: 100%;
         height: 100%;
-        object-fit: cover; /* ✅ 圖片裁切填滿 */
+        object-fit: cover;
     }
 
 .product-name {
@@ -162,8 +158,6 @@ header {
     color: #555;
 }
 
-
-/* ---- Pagination ---- */
 .pagination {
     text-align: center;
     margin: 40px 0 80px;
@@ -185,7 +179,7 @@ header {
     color: #888;
     font-size: 14px;
 }
-/* ---- Footer ---- */
+
 footer {
     text-align: left;
     font-size: 10px;
@@ -207,4 +201,3 @@ footer {
         gap: 20px;
     }
 }
-
