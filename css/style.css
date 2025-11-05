@@ -1,11 +1,10 @@
-/* General */
 body {
     font-family: 'Inter', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff;
     color: #111;
-    padding-top: 100px; /* 根據你的 header 高度微調 */
+    padding-top: 100px; 
     cursor: url("../images/starr.png"), auto;
 }
 
@@ -13,7 +12,6 @@ a, button, .icons span, .product-card {
     cursor: url("../images/starr.png"), pointer;
 }
 
-/* Header */
 header {
     width: 100%;
     border-bottom: 1px solid #ccc;
@@ -39,14 +37,14 @@ header {
     margin-left: 20px;
 }
 
-.header-left nav a {
-    padding: 0 12px;
-    text-decoration: none;
-    color: #000;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    
-}
+    .header-left nav a {
+        padding: 0 12px;
+        text-decoration: none;
+        color: #000;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        font-weight: bold;
+    }
 
     .header-left nav a:hover {
         text-decoration: underline;
@@ -69,12 +67,10 @@ header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    /*width: 120px;*/
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-  /*  flex: 1;*/
 }
 
 .logo img {
@@ -82,7 +78,6 @@ header {
     width: auto;
 }
 
-/* Banner */
 .banner {
     width: 100%;
     height: 505px;
@@ -96,7 +91,7 @@ header {
     max-width: 1000px;
     width: 100%;
     height: 595px;
-    margin: 0 auto; /* ✅ 置中 */
+    margin: 0 auto;
     padding: 0 0;
     position: relative;
     overflow: hidden;
@@ -121,7 +116,7 @@ header {
 
 .banner-dots {
     position: absolute;
-    bottom: 15px; /* 距離圖片底部 */
+    bottom: 15px; 
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -132,7 +127,7 @@ header {
         display: inline-block;
         width: 8px;
         height: 8px;
-        background-color: rgba(255, 255, 255, 0.6); /* 半透明白點 */
+        background-color: rgba(255, 255, 255, 0.6); 
         border-radius: 50%;
         margin: 0 4px;
         /*cursor: pointer;*/
@@ -143,7 +138,6 @@ header {
             background-color: #ddd; 
         }
 
-/* Products */
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -174,11 +168,11 @@ header {
 
 .product-img {
     width: 100%;
-    aspect-ratio: 1 / 1; /* 正方形 */
-    background-color: #f0f0f0; /* ✅ 灰色底回來 */
-    border: 1px solid #111; /* ✅ 灰色框回來 */
+    aspect-ratio: 1 / 1;
+    background-color: #f0f0f0;
+    border: 1px solid #111; 
     border-radius: 4px;
-    overflow: hidden; /* ✅ 讓圖片不超出邊框 */
+    overflow: hidden; 
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -188,7 +182,7 @@ header {
     .product-img img {
         width: 100%;
         height: 100%;
-        object-fit: cover; /* ✅ 圖片裁切填滿 */
+        object-fit: cover; 
     }
 
 
@@ -202,7 +196,6 @@ header {
     color: #555;
 }
 
-/* See More */
 .see-more {
     text-align: center;
     margin-bottom: 50px;
@@ -219,7 +212,6 @@ header {
             text-decoration: underline;
         }
 
-/* Footer */
 footer {
     text-align: left;
     font-size: 10px;
